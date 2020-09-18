@@ -13,10 +13,14 @@ map <C-n> :NERDTreeToggle<CR>
 call vundle#end()            " vundle, required
 filetype plugin indent on    " vundle, required
 
+Plugin 'rhysd/vim-clang-format'
+autocmd FileType c ClangFormatAutoEnable
+
 " Native settings
 set expandtab
 set tabstop=2
 set number
+syntax on
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
